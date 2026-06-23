@@ -12,7 +12,6 @@ def fizzbuzz(n):
             print("Buzz", end=" ")
         else:
             print(i, end=" ")
-    print()
 
 
 if __name__ == "__main__":
