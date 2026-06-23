@@ -1,35 +1,33 @@
 #!/usr/bin/python3
-""" FizzBuzz
-"""
+""" FizzBuzz """
 import sys
 
 
 def fizzbuzz(n):
     """
-    FizzBuzz function prints numbers from 1 to n separated by a space.
-
-    - For multiples of three print "Fizz" instead of the number and for
-      multiples of five print "Buzz".
-    - For numbers which are multiples of both three and five print "FizzBuzz".
+    Prints numbers from 1 to n separated by spaces.
+    Multiples of 3 -> Fizz
+    Multiples of 5 -> Buzz
+    Multiples of both 3 and 5 -> FizzBuzz
     """
     if n < 1:
         return
 
-    tmp_result = []
+    result = []
     for i in range(1, n + 1):
-        if (i % 3) == 0 and (i % 5) == 0:
-            tmp_result.append("FizzBuzz")
-        elif (i % 3) == 0:
-            tmp_result.append("Fizz")
-        elif (i % 5) == 0:
-            tmp_result.append("Buzz")
+        if i % 3 == 0 and i % 5 == 0:
+            result.append("FizzBuzz")
+        elif i % 3 == 0:
+            result.append("Fizz")
+        elif i % 5 == 0:
+            result.append("Buzz")
         else:
-            tmp_result.append(str(i))
+            result.append(str(i))
 
-    print(" ".join(tmp_result), end="")
+    print(" ".join(result))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) <= 1:
         print("Missing number")
         print("Usage: ./0-fizzbuzz.py <number>")
